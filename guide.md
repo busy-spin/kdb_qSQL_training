@@ -27,3 +27,8 @@ x: `BTCUSD
 str_x: string x
 `$str_x
 ```
+
+Mapping a list of strings to symbols
+```q
+`$ ("BTCUSD"; "BTCUSD"; "BTCSGD")
+```

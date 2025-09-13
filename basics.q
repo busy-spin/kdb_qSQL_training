@@ -25,5 +25,15 @@ str_x
 
 
 
-type "z" $ ("2020-01-01 00:00:00")
+enlist ("2020-01-01 00:00:00")
 
+type string "2020-01-01 00:00:00"
+
+
+(string `BTCSGD) = "BTCXGD"
+
+("BTCUSD"; "BTCUSD"; "BTCSGD")
+`BTCSGD in `$ ("BTCUSD"; "BTCUSD"; "BTCSGD")
+
+
+"z" $ enlist "2020-01-01 00:00:00"

@@ -1,8 +1,29 @@
-trips: ("DMSPPNIFFFFFSFEFFF"; enlist ",") 0: `:data/smalltrips.csv
-weather: ("DFFFFFFFFF"; enlist ",") 0: `:data/weather.csv
+/ Load trade data from CSV files
 
-weather
+trade_data: ("SSFFS"; enlist ",") 0: `:/opt/apps/data/gemini_trades/data.csv
 
-tables[]
+/ Display the loaded trade data `$ cast string to symbol
 
-count select from trips where vendor  `CMT
+td: ("SSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
+td
+
+
+td1: update timestamp : string timestamp  from td
+
+td1
+
+
+x:`BTCSGD
+
+x
+
+str_x: string x
+
+str_x
+
+`$str_x
+
+
+
+"z"$ ("2020-01-01 00:00:00")
+

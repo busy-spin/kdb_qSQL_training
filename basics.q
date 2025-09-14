@@ -4,9 +4,13 @@ trade_data: ("SSFFS"; enlist ",") 0: `:/opt/apps/data/gemini_trades/data.csv
 
 / Display the loaded trade data `$ cast string to symbol
 
-td: ("SSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
+td: ("DSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
 td
 
+{x!type each td x} cols td
+
+td `symbol`price`total_size
+td
 
 td1: update timestamp : string timestamp  from td
 
@@ -35,5 +39,4 @@ type string "2020-01-01 00:00:00"
 ("BTCUSD"; "BTCUSD"; "BTCSGD")
 `BTCSGD in `$ ("BTCUSD"; "BTCUSD"; "BTCSGD")
 
-
-"z" $ enlist "2020-01-01 00:00:00"
+system "t"

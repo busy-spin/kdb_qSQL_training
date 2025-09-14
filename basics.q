@@ -4,8 +4,13 @@ trade_data: ("SSFFS"; enlist ",") 0: `:/opt/apps/data/gemini_trades/data.csv
 
 / Display the loaded trade data `$ cast string to symbol
 
-td: ("DSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
+td: ("SSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
+td: update timestamp : string timestamp  from td
 td
+
+select timestamp, symbol, price, total_size, cost: total_size * price , side from td where side = `$"SELL", price < 140000
+select count i from td
+
 
 {x!type each td x} cols td
 

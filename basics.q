@@ -4,7 +4,11 @@ trade_data: ("SSFFS"; enlist ",") 0: `:/opt/apps/data/gemini_trades/data.csv
 
 / Display the loaded trade data `$ cast string to symbol
 
-td: ("SSFFS"; enlist ",") 0: `$":/opt/apps/data/gemini_trades/2025-08-30.csv"
+files: system "ls /opt/apps/data/gemini_trades/*.csv"
+show each files
+
+td: ("SSFFS"; enlist ",") 0: each files
+td
 td: update timestamp : string timestamp  from td
 td
 
